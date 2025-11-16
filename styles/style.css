@@ -82,8 +82,8 @@
   top: 0;
   right: 0;
   inline-size: 25px;
-  block-size: 25px;
   margin: 20px;
+  block-size: 25px;
   border-top: 1px solid var(--btn-color);
   border-right: 1px solid var(--btn-color);
 }
