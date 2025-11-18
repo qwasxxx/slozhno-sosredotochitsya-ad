@@ -360,7 +360,7 @@
 
 .question__section-title-two {
   min-inline-size: 100%; 
-  max-inline-size: none; 
+  max-inline-size: none;
 }
 
 .question__section-answer-two-container {
@@ -413,6 +413,6 @@
   
   .frame::after {
     margin: 10px;
-    block-size: 25px; 
+    block-size: 25px;
   }
 }
