@@ -297,7 +297,7 @@
 
   .header__title,
   .footer__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    font-size: clamp(5rem, 0.5625rem + 14.4531vw, 7.5rem);
   }
 
   .header__text {
@@ -312,8 +312,10 @@
   }
 
   .question__section-answer-two-container {
-    gap: 15px;
-    padding-block-start: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-block-start: 20px;
   }
 
   .question__section-title-two {
@@ -322,6 +324,8 @@
 
   .question__section__fhree {
     grid-template-columns: 1fr 2fr;
+    gap: 15px;
+    padding: 0 10px;
   }
 
   .question__section__image-container {
@@ -334,6 +338,7 @@
   .question__section__image-item {
     grid-column: auto;
     grid-row: auto;
+    width: 100%;
   }
 
   .footer {
