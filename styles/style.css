@@ -35,6 +35,7 @@
 /* Состояния кнопок */
 .header__theme-menu-button_active {
   border: 1px solid var(--btn-color);
+  pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
@@ -57,8 +58,8 @@
   right: 0;
   display: flex;
   gap: 10px;
-  padding-right: 8px;
   align-items: center;
+  padding-right: 8px;
   margin: 20px;
   color: var(--btn-color);
   text-transform: uppercase;
@@ -81,8 +82,8 @@
   top: 0;
   right: 0;
   inline-size: 25px;
-  margin: 20px;
   block-size: 25px;
+  margin: 20px;
   border-top: 1px solid var(--btn-color);
   border-right: 1px solid var(--btn-color);
 }
