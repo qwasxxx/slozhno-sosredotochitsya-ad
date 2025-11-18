@@ -1,5 +1,4 @@
 .page {
-  background-color: var(--title-color);
   margin: 0 auto;
   padding: 0;
   font-family: var(--font, monospace);
@@ -18,7 +17,7 @@
   grid-template-rows: 1fr min-content 1fr;
 }
 
-/* Навигация - кнопки выбора темы */
+/* кнопки выбора темы */
 .header__theme-menu-list {
   display: flex;
   gap: 10px;
@@ -52,7 +51,7 @@
   border-bottom: 1px solid var(--btn-color);
 }
 
-/* Декоративный элемент REC */
+/* REC */
 .decorative__element {
   position: absolute;
   top: 0;
@@ -66,6 +65,7 @@
   text-transform: uppercase;
 }
 
+/* кружочек REC */
 .decorative__element::after {
   content: "";
   display: block;
@@ -76,7 +76,7 @@
   filter: drop-shadow(0px 0px 4px var(--accent-color));
 }
 
-/* Декоративные рамки */
+/* рамки */
 .frame::before {
   content: "";
   position: absolute;
@@ -158,7 +158,7 @@
   border: 1px solid var(--text-color);
 }
 
-/* Секция 1 - Почему сложно сосредоточиться */
+/* почему сложно сосредоточиться */
 .question__section__one {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -176,7 +176,7 @@
   padding-block-end: 10px;
 }
 
-/* Секция 2 - Что снижает концентрацию */
+/* что снижает концентрацию */
 .question__section-two {
   margin: 0 20px;
   padding-block: 80px;
@@ -197,7 +197,7 @@
   margin-block-end: 10px;
 }
 
-/* Секция 3 - Советы по концентрации */
+/* советы по концентрации */
 .question__section__fhree {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -210,6 +210,7 @@
   gap: 20px;
 }
 
+
 .question__section-answer-subtitle {
   font-weight: 400;
 }
@@ -218,7 +219,7 @@
   padding-block-start: 10px;
 }
 
-/* Секция с галереей изображений */
+/* галерея изображений */
 .question__section__image {
   padding-block-end: 60px;
 }
@@ -241,7 +242,7 @@
   object-position: center;
 }
 
-/* Позиционирование изображений в сетке */
+/* изображения в гриде */
 .question__section__image-item:first-of-type {
   grid-column: 1 / 3;
 }
@@ -264,7 +265,7 @@
   grid-column: 2 / 4;
 }
 
-/* Подвал сайта */
+/* футер сайта */
 .footer {
   position: relative;
   min-block-size: 100vh;
@@ -282,38 +283,38 @@
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
-/* Адаптив для планшетов */
-@media (max-width: 768px) {
+/* для планшетов ( <=768) */
+@media (max-width:768px) {
   .header__theme-menu {
-    display: flex;
     justify-content: flex-end;
+    display: flex;
   }
 
   .header__theme-menu-list {
-    flex-direction: column;
     align-items: flex-end;
+    flex-direction: column;
+    display: flex;
     gap: 13px;
   }
 
-  .header__title,
-  .footer__title {
-    font-size: clamp(5rem, 0.5625rem + 14.4531vw, 7.5rem);
+  .header__text {
+    max-block-size: 117px;
+    max-inline-size: 364px;
   }
 
-  .header__text {
-    max-inline-size: 364px;
-    max-block-size: 117px;
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   }
 
   .question__section__one {
-    grid-template-columns: 1fr 2fr;
     gap: 20px;
-    padding-inline-end: 20px;
+    grid-template-columns: 33% 67%;
+    padding-inline-end:20px;
   }
 
   .question__section-answer-two-container {
-    display: flex;
     flex-direction: column;
+    display: flex;
     gap: 20px;
     padding-block-start: 20px;
   }
@@ -321,33 +322,22 @@
   .question__section-title-two {
     max-inline-size: 236px;
   }
-
+  
   .question__section__fhree {
-    grid-template-columns: 1fr 2fr;
-    gap: 15px;
-    padding: 0 10px;
-  }
-
-  .question__section__image-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin: 0 20px;
-  }
-
-  .question__section__image-item {
-    grid-column: auto;
-    grid-row: auto;
-    width: 100%;
-  }
-
+    grid-template-columns: 35% 65%;
+    display: grid;
+    padding-block-end: 80px;
+  }  
+ 
   .footer {
+    display: flex;
+    justify-content: center;
     padding: 20px;
   }
 }
 
-/* Адаптив для мобильных устройств */
-@media (max-width: 375px) {
+/* для телефонов ( <=365) */
+@media (max-width: 365px) {
  .header {
   padding: 10px;
 }
@@ -378,8 +368,8 @@
 }
 
 .question__section-title-two {
-  min-inline-size: 100%;
-  max-inline-size: none;
+  min-inline-size: 100%; 
+  max-inline-size: none; 
 }
 
 .question__section-answer-two-container {
@@ -432,6 +422,6 @@
   
   .frame::after {
     margin: 10px;
-    block-size: 25px;
+    block-size: 25px; 
   }
 }
