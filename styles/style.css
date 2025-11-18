@@ -35,7 +35,6 @@
 /* Состояния кнопок */
 .header__theme-menu-button_active {
   border: 1px solid var(--btn-color);
-  pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
